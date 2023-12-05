@@ -1,27 +1,52 @@
-import { Grid } from "@mui/material";
+import { Grid, Stack, Typography, Button, ButtonGroup } from "@mui/material";
 import { useEffect, useState } from "react";
-import CardPlant from "../../components/CardPlant/CardPlant";
 import { plantsObj } from "./plants";
-
+import GridPlants from "../../components/GridPlants/GridPlants";
+import * as React from "react";
 
 const HomePage = () => {
-    const [plants, setPlants] = useState(plantsObj.plants);
+  const [plants, setPlants] = useState(plantsObj.plants);
+  const [plantType, setPlantType] = useState("");
 
-
-    return (
-        <>
-         <img
-        width={"200px"}
-        height={"100px"}
-        src={`./images/0.jpeg`}
-        alt={"dddddddddddddd"}
-      />
-        <Grid container spacing={2}>
-        {plants.map((plant, index) => <Grid key={index} item spacing={2}><CardPlant
-        category={plant.category} name={plant.name} h={plant.h} d={plant.d} winterResistance={plant.winterResistance} location={plant.location} grounds={plant.grounds} specialAspects={plant.specialAspects} index={index}/></Grid>)}
-        </Grid>
-        </>
+  useEffect(() => {
+    setPlants(
+      plantsObj.plants.filter((plant) => {
+        if (plantType !== "") {
+          return plant.category === plantType;
+        }
+        return true;
+      })
     );
-}
+  }, [plantType]);
+
+  return (
+    <Stack padding={"64px"} gap={"24px"}>
+      <Stack flexDirection={"row"} justifyContent={"space-between"}>
+        <Button onClick={() => setPlantType("")}>
+          <Typography>Все</Typography>
+        </Button>
+        <Button onClick={() => setPlantType("Хвойные деревья")}>
+          <Typography>Хвойные деревья</Typography>
+        </Button>
+        <Button onClick={() => setPlantType("Хвойные кустарники")}>
+          <Typography>Хвойные кустарники</Typography>
+        </Button>
+        <Button onClick={() => setPlantType("Лиственные деревья")}>
+          <Typography>Лиственные деревья</Typography>
+        </Button>
+        <Button onClick={() => setPlantType("Лиственные кустарники")}>
+          <Typography>Лиственные кустарники</Typography>
+        </Button>
+        <Button onClick={() => setPlantType("Лианы")}>
+          <Typography>Лианы</Typography>
+        </Button>
+        <Button onClick={() => setPlantType("Травянистые многолетники")}>
+          <Typography>Травянистые многолетники</Typography>
+        </Button>
+      </Stack>
+      <GridPlants plants={plants} />
+    </Stack>
+  );
+};
 
 export default HomePage;
