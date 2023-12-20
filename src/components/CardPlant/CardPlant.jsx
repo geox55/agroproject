@@ -7,7 +7,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Modal, Stack } from "@mui/material";
-import image from "../../pages/HomePage/images/1.jpg";
+import images from "./images";
 
 const CardPlant = ({
   category,
@@ -18,18 +18,23 @@ const CardPlant = ({
   location,
   grounds,
   specialAspects,
+  imageUrl,
   index,
 }) => {
   const [open, setOpen] = useState(false);
 
   const handleClose = () => setOpen(false);
 
-  useEffect(() => {
-    console.log();
-  }, []);
-
   return (
-    <Card sx={{ maxWidth: "500px", height: "100%" }}>
+    <Card
+      sx={{
+        backgroundColor: "#EEE",
+        border: "2px solid #888",
+        borderRadius: "8px",
+        maxWidth: "500px",
+        height: "100%",
+      }}
+    >
       <CardContent>
         <Stack alignItems={"center"}>
           <Box
@@ -41,7 +46,7 @@ const CardPlant = ({
             }}
             component="img"
             alt={name}
-            src={image}
+            src={images[imageUrl]}
           ></Box>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
             {category}

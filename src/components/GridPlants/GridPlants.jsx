@@ -22,6 +22,7 @@ const GridPlants = ({ plants }) => {
             location={plant.location}
             grounds={plant.grounds}
             specialAspects={plant.specialAspects}
+            imageUrl={plant.imageUrl}
             index={index}
           />
         </Grid>

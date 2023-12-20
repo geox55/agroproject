@@ -14,6 +14,7 @@ export const plantsObj = {
         "умеренно увлажненные",
       ],
       specialAspects: "ветро- и газоустойчивость. Не переносит застоя влаги",
+      imageUrl: "sosna",
     },
     {
       category: "Хвойные кустарники",
@@ -30,6 +31,7 @@ export const plantsObj = {
       ],
       specialAspects:
         "ветро- и газоустойчивость. Не переносит застоя влаги. Хорошо переносит стрижку.",
+      imageUrl: "juniper",
     },
     {
       category: "Лиственные деревья",
@@ -40,6 +42,7 @@ export const plantsObj = {
       location: ["солнце", "полутень"],
       grounds: ["воздухопроницаемые", "питательные", "легкие", "увлажненные"],
       specialAspects: "ветро- и газоустойчивость",
+      imageUrl: "rowan",
     },
     {
       category: "Лиственные деревья",
@@ -50,6 +53,7 @@ export const plantsObj = {
       location: ["солнце", "полутень"],
       grounds: ["воздухопроницаемые", "питательные", "легкие", "увлажненные"],
       specialAspects: "ветро- и газоустойчивость. Хорошо переносит стрижку.",
+      imageUrl: "bird_cherry",
     },
     {
       category: "Лиственные кустарники",
@@ -60,6 +64,7 @@ export const plantsObj = {
       location: ["солнце", "полутень"],
       grounds: ["воздухопроницаемые", "легкие", "увлажненные"],
       specialAspects: "мульчирование, защита от ветра",
+      imageUrl: "hydrangea",
     },
     {
       category: "Лиственные кустарники",
@@ -70,6 +75,7 @@ export const plantsObj = {
       location: ["солнце", "полутень"],
       grounds: ["воздухопроницаемые", "питательные", "увлажненные"],
       specialAspects: "может подмерзать до снеговой линии",
+      imageUrl: "stefandra",
     },
     {
       category: "Лиственные кустарники",
@@ -81,6 +87,7 @@ export const plantsObj = {
       grounds: ["рыхлые", "питательные", "увлажненные"],
       specialAspects:
         "устойчивая к условиям города, переносит кратковременную засуху и застой влаги, необходима обрезка",
+      imageUrl: "spirea",
     },
     {
       category: "Лианы",
@@ -91,6 +98,7 @@ export const plantsObj = {
       location: ["солнце", "полутень"],
       grounds: ["рыхлые", "питательные", "увлажненные"],
       specialAspects: "для эстетичного развития необходимо формирование лианы",
+      imageUrl: "grace",
     },
     {
       category: "Травянистые многолетники",
@@ -101,6 +109,7 @@ export const plantsObj = {
       location: ["солнце", "полутень"],
       grounds: ["рыхлые", "питательные", "увлажненные до болотистой"],
       specialAspects: "рекомендуется обрезка после цветения",
+      imageUrl: "derbenik",
     },
     {
       category: "Травянистые многолетники",
@@ -111,6 +120,7 @@ export const plantsObj = {
       location: ["солнце"],
       grounds: ["рыхлые", "питательные", "супесчаные"],
       specialAspects: "не переносит переувлажнения",
+      imageUrl: "sedum",
     },
   ],
 };

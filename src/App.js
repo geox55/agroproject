@@ -1,13 +1,16 @@
 import "./App.css";
 import React from "react";
 import Layout from "./pages/Layout/Layout";
-import HomePage from "./pages/HomePage/HomePage";
+import Routers from "./components/Routers";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <Layout>
-      <HomePage />
-    </Layout>
+    <BrowserRouter>
+      <Layout>
+        <Routers />
+      </Layout>
+    </BrowserRouter>
   );
 }
 
